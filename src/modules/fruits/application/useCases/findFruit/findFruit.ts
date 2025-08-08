@@ -3,7 +3,6 @@ import { UseCase } from '../../../../../shared/core/UseCase';
 import { IFruitRepo } from '../../../infrastructure/repos/fruitRepo';
 import { Result } from '../../../../../shared/domain/Result';
 import { FruitName } from '../../../domain/fruitName';
-import { Fruit } from '../../../domain/fruit';
 
 interface FindFruitDTO {
   name: string;
