@@ -9,7 +9,7 @@ describe('CreateFruitForFruitStorage', () => {
   let fruitRepo: MongoFruitRepo;
 
   beforeAll(async () => {
-    await mongoose.connect('mongodb://localhost:27017/fruit-storage-test');
+    await mongoose.connect('mongodb://localhost:27017/fruit-storage-test-create');
   });
 
   beforeEach(async () => {
@@ -19,6 +19,7 @@ describe('CreateFruitForFruitStorage', () => {
   });
 
   afterAll(async () => {
+    await FruitModel.deleteMany({});
     await mongoose.disconnect();
   });
 
